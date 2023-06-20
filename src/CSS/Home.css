@@ -1,4 +1,106 @@
-.Heading{
-    padding-top: 20px;
-    margin-top: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+ 
+.mainContainer {
+  padding: 2em;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  background-image: linear-gradient(80deg, #cd06cd, #1010cb);
+
+  background-position: 50% 50%;
+  animation: background-move 10s linear infinite;
+  background-size: 100vw auto, 100% 100%;
+  background-size: unquote("max(100vw, 30em)") auto, 100% 100%;
+  /* background-color: #290759; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.leftSubpart {
+  /* background-color: #000062; */
+  background-color: #00006200;
+  height: 80vh;
+  width: 160%;
+  display: flex;
+  flex-direction: column;
+  margin: 0.8rem 2rem 2rem 3rem;
+  border-radius: 3rem;
+  /* border: solid white 0.2rem; */
+ 
+  font-family: 'Comfortaa', cursive;
+}
+
+.rightSubpart {
+  /* position: relative; */
+  /* right: 0rem; */
+  background-color: #000062;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0.8rem 3rem 2rem 1rem;
+  border-radius: 3rem;
+  border: solid white 0.2rem;
+}
+
+ 
+ .headLine{
+    color: #ffffff;
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+  
+ }
+
+ .leftSubpart p{
+    color: #ffffff;
+    margin-top: 2rem;
+    font-size: x-large;
+    font-weight: 700;
+    width: 80%;
+    align-self: center;
+    font-family: 'Comfortaa', cursive;
+ }
+ 
+ .description{
+    color: #ffffff;
+    margin-top: 2rem;
+    font-size: x-large;
+    font-weight: 700;
+ }
+
+ .rightSubpart .headLine{
+    font-size: 3rem;
+ }
+
+ .rightSubpart .description{
+    width: 80%;
+     
+ }
+
+.listButton{
+    color: white;
+    position: relative;
+    bottom: 0rem;
+    top: 4rem;
+    height: 3rem;
+    width: 11rem;
+    cursor: pointer;
+    display: grid;
+    align-content: center;
+    font-family: 'Comfortaa';
+    border-radius: 5px;
+    background-color: #ec0fd1;
+}
+
+.listButton:hover{
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }

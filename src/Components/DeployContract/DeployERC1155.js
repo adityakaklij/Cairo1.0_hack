@@ -76,7 +76,9 @@ const uploadNFTContent = async(inputFile)  =>{
 
     const salt = (Date.now()).toString(); 
 
-    const deployContractRes = await provider.deploy({ classHash: contractClassHash, salt,});
+    const deployContractRes = await provider.deploy({ classHash: contractClassHash, salt,
+                
+    });
 
         console.log("Waiting for Tx to be Accepted on Starknet - Contract Deployment...");
         await provider.waitForTransaction(deployContractRes.transaction_hash);

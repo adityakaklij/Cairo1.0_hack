@@ -39,12 +39,14 @@ function DeployERC721({open}) {
   const deployContract = async () => {
     await connectFun()
     // Update ERC721 Contract Hash.
-    const contractClassHash = '0x0238a1f2b3a1b36bb57bad9200f20bb91c6e812d8a952876de29c57213314465'; // Test2.sol   
+    const contractClassHash = '0x0238a1f2b3a1b36bb57bad9200f20bb91c6e812d8a952876de29c57213314465'; 
     console.log("Deployment Tx - Contract to StarkNet...");
 
     const salt = (Date.now()).toString(); 
 
-    const deployContractRes = await provider.deploy({ classHash: contractClassHash, salt,});
+    const deployContractRes = await provider.deploy({ classHash: contractClassHash, salt, 
+        name, symbol, NFTSupply, baseURI
+    });
 
         console.log("Waiting for Tx to be Accepted on Starknet - Contract Deployment...");
         await provider.waitForTransaction(deployContractRes.transaction_hash);

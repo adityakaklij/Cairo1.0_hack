@@ -6,6 +6,7 @@ import Home from './Components/Home';
 import DeployContract from './Components/DeployContract/DeployContractFile';
 import DeployERC20 from './Components/DeployContract/DeployERC20';
 import './CSS/App.css';
+import ERC721 from './Components/ERC721';
 
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
 
           <Route exact path="/DeployERC20">
             <DeployERC20/>
+          </Route>
+
+          <Route exact path="/ERC721">
+            <ERC721/>
           </Route>
           
         </Switch>

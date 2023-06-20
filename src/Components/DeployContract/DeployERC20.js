@@ -7,7 +7,6 @@ function DeployERC20() {
 
     const [name, setName]= useState()
     const [symbol, setSymbol]= useState()
-    const [baseURI, setBaseURI]= useState()
     const [NFTSupply, setNFTSupply]= useState(10000)
     const [txHash, setTxHash] = useState() 
     const [provider, setProvider] = useState()
@@ -38,7 +37,9 @@ function DeployERC20() {
 
     const salt = (Date.now()).toString(); 
 
-    const deployContractRes = await provider.deploy({ classHash: contractClassHash, salt,});
+    const deployContractRes = await provider.deploy({ classHash: contractClassHash, salt,
+        name, symbol, NFTSupply,
+    });
 
         console.log("Waiting for Tx to be Accepted on Starknet - Contract Deployment...");
         await provider.waitForTransaction(deployContractRes.transaction_hash);
@@ -61,10 +62,7 @@ function DeployERC20() {
         console.log(e.target.value)
         setSymbol(e.target.value)
     }
-    function GetURI(e){
-        console.log(e.target.value)
-        setBaseURI(e.target.value)
-    }
+
     function GetSupply(e){
         console.log(e.target.value)
         setNFTSupply(e.target.value)

@@ -29,6 +29,10 @@ export default function Navbar() {
                         <a className="nav-link" href="#/DeployERC20">Create Token</a>
                     </li>
 
+                    <li className="nav-item">
+                        <a className="nav-link" href="#/ERC721">ERC721</a>
+                    </li>
+
              
                         
                     {/* <li lassName='nav-item1'>
