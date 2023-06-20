@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import DeployContract from './Components/DeployContract/DeployContractFile';
 import DeployERC20 from './Components/DeployContract/DeployERC20';
+import './CSS/App.css';
 
 
 function App() {
