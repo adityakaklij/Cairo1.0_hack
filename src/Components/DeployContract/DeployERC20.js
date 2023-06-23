@@ -38,8 +38,11 @@ function DeployERC20() {
     const salt = (Date.now()).toString(); 
 
     const deployContractRes = await provider.deploy({ classHash: contractClassHash, salt,
-        name, symbol, NFTSupply,
     });
+
+    // const deployContractRes = await provider.deploy({ classHash: contractClassHash, salt,
+    //     name, symbol, NFTSupply,
+    // });
 
         console.log("Waiting for Tx to be Accepted on Starknet - Contract Deployment...");
         await provider.waitForTransaction(deployContractRes.transaction_hash);
