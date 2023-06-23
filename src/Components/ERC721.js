@@ -68,12 +68,7 @@ const ERC721 = () => {
     }
 
 
-    const mintToOtherAdd = async ()=>{
-        // // let mintTo = await contractInstance.mintToAddress(singleAdd,{gasLimit: 250000,gasPrice: ethers.utils.parseUnits('5000', 'gwei')})
-        // let mintTo = await contractInstance.mintToAddress(singleAdd)
-        // await mintTo.wait();
-        // window.alert("Minted to the given address")
-    }
+
 
     const takeInputAdd = (e)=>{
         setSingleAdd(e.target.value)
@@ -100,7 +95,7 @@ const ERC721 = () => {
 
                 <br/>
                 <input className="inputAdd" type="text" onChange={takeInputAdd} placeholder="Enter address"/>
-                <button className="mintBtn" onClick={mintToOtherAdd}>Mint</button>
+                <button className="mintBtn" onClick={mintNFTs}>Mint</button>
 
           
 

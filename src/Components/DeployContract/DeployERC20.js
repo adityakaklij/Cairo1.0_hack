@@ -31,8 +31,8 @@ function DeployERC20() {
 
   const deployContract = async () => {
     await connectFun()
-    // Update ERC721 Contract Hash.
-    const contractClassHash = '0x0238a1f2b3a1b36bb57bad9200f20bb91c6e812d8a952876de29c57213314465'; // Test2.sol   
+    // Test contract Hash, not original ERC20 contract Hash. Just update contract Hash to deploy the new contract
+    const contractClassHash = '0x077b6790bcb0b797564e8a5e05dd5b978739f415228404e9ba04a3a9e96e18be'; // 
     console.log("Deployment Tx - Contract to StarkNet...");
 
     const salt = (Date.now()).toString(); 
